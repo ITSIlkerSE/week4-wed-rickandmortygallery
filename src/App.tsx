@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import CharacterGallery from './components/CharacterGallery';
 import { Character } from './model/Character';
@@ -1130,11 +1130,16 @@ export default function App() {
             "created": "2017-11-05T10:02:26.701Z"
         }
     ]
+    const [data, setData] = useState("");
+    const result = characters.filter((character) => character.name.includes(data))
+
+    return (<div><CharacterGallery characters={result}/>
+
+            <input onChange={(event) => setData(event.target.value)}></input>
+            <h1>{data}</h1>
 
 
-
-    return (<div><CharacterGallery characters={characters}/></div>
-
+    </div>
 
 
     );

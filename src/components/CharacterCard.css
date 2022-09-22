@@ -1,6 +1,7 @@
 .character-card {
     display: flex;
     flex-direction: column;
+    background: ghostwhite;
 }
 
 h3 {
