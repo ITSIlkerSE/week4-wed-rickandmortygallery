@@ -11,10 +11,13 @@ export default function CharacterCard(props: CharacterCardProps) {
 
     return (
 
-        <div>
-            <p className={"character-card"}>
+        <div  className="character-card">
+
             <h3 >{props.charVal.name} !</h3>
-        </p>
+         <img src={props.charVal.image}/>
+            <p>{props.charVal.status}
+
+            </p>
         </div>
 
 

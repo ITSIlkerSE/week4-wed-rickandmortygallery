@@ -12,12 +12,11 @@ export default function CharacterGallery(props: CharacterGalleryProps) {
 
 
     return (
-        <div className={"cards"}>
-            <span className={"card"}>
+        <div className="cards">
 
 
-                {props.characters.map((char) => <CharacterCard charVal={char}/>)}
-            </span>
+            {props.characters.map((char) => <div className="card"><CharacterCard charVal={char}/></div>)}
+
 
         </div>
 
